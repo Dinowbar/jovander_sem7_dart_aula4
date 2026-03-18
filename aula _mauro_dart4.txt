@@ -1,0 +1,70 @@
+class Carro {
+int portas = 0;
+int rodas = 4;
+int velocidade = 0;
+Carro(this.portas);
+String estado() {
+return 'Carro com $portas portas. Velocidade: $velocidade km/h';
+}
+  void acelerar() {
+    velocidade += 5;
+  }
+  void frear() {
+ if(velocidade <= 10){
+   velocidade = 0;
+ }
+   else{
+     velocidade -=10;
+   }
+    }
+  }
+
+
+void main() {
+  Carro novo = Carro(4);
+
+  print(novo.estado());
+
+  novo.acelerar();
+  novo.acelerar();
+  novo.acelerar();
+  print(novo.estado());
+
+  novo.frear();
+  print(novo.estado());
+  
+    novo.frear();
+  print(novo.estado());
+}
+
+
+class Carro {
+int portas = 0;
+int rodas = 4;
+int velocidade = 0;
+Carro(this.portas);
+String estado() {
+return 'Carro com $portas portas. Velocidade: $velocidade km/h';
+}
+void acelerar() =>velocidade += 5;
+
+void frear() => velocidade = (velocidade < 10) ? 0 : (velocidade - 10);
+  }
+
+
+void main() {
+  Carro novo = Carro(4);
+
+  print(novo.estado());
+
+  novo.acelerar();
+  novo.acelerar();
+  novo.acelerar();
+  print(novo.estado());
+
+  novo.frear();
+  print(novo.estado());
+  
+    novo.frear();
+  print(novo.estado());
+}
